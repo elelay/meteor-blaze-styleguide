@@ -1,0 +1,26 @@
+#main > .container-fluid {
+	width: 100%;
+}
+
+.row-content {
+	display: flex;
+	flex-wrap: wrap;
+	min-height: 100%;
+}
+
+.row-content > [class*=col] {
+	display: flex;
+	flex-direction: column;
+}
+
+.row-screen {
+	text-align: right;
+	margin-right: 50px;
+	margin-bottom: 40px;
+	width: 100%;
+}
+
+#renderer {
+	transform-origin: left top 0px;
+	border: 1px solid #bbb;
+}

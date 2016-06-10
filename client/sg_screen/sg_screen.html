@@ -1,0 +1,10 @@
+<template name="sgScreen">
+	<div class="form-inline form-screen">
+	<label for="screen">Screen </label>
+	<select id="screen" class="form-control">
+		{{#each screens}}
+			<option {{selected}}>{{name}}</option>
+		{{/each}}
+	</select>
+	</div>
+</template>

@@ -1,0 +1,57 @@
+#nav {
+	border-right: 1px solid gray;
+}
+
+#nav ul {
+	list-style: none;
+	padding-left: 40px;
+}
+
+#nav > ul {
+	padding-left: 0;
+}
+
+#nav a:active, a:focus {
+	outline: none;
+	text-decoration: underline;
+}
+
+#nav a {
+	color: #666;
+	text-decoration: none;
+}
+
+
+a[data-toggle="collapse"]:before {
+    font-family: 'Glyphicons Halflings';
+    font-size: 10px;
+    content: "\e252 ";
+    color: grey;
+    vertical-align: middle;
+}
+
+a[data-toggle="collapse"].collapsed:before {
+    content: "\e250 ";
+}
+
+#sgNav > li {
+	border-bottom: 1px solid #eee;
+	padding-bottom: 1em;
+	margin-bottom: 2em;
+}
+
+#sgNav > li > a {
+	font-size: 1.4em;
+}
+
+#sgNav a.active {
+	color: #333;
+}
+
+#sgNav a.link {
+	display: block;
+}
+
+#sgNav a.link.active {
+	font-weight: bold;
+}

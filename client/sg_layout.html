@@ -1,0 +1,45 @@
+<template name="sgLayout">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="container-fluid">
+				<div class="row row-content">
+					<div id="nav" class="col-lg-3">
+						{{> sgNav }}
+					</div>
+					<div id="main" class="col-lg-9">
+						<div class="container-fluid">
+							<div class="row row-screen">
+								{{> sgScreenS}}
+							</div>
+							<div class="row">
+								<a id="external" aria-label="external link"
+									href="http://localhost:3100{{rendererPathWithOptions}}">
+									<span class="glyphicon glyphicon-link" aria-hidden="true"></span>
+								</a>
+								<div style="width: 100%; height:100%; position:relative; overflow: hidden">
+									<iframe id="renderer"
+											src="http://localhost:3100{{rendererPath}}"
+											style="width:{{width}}px; height: {{height}}px; transform: scale({{zoom}}, {{zoom}});">
+									</iframe>
+								</div>
+							</div>
+							{{!-- when including the component directly,
+								media queries don't apply to the component's size,
+								but to the window's size
+							<div class="row">
+								<div style="width: 100%; height:100%; position:relative; overflow: hidden">
+									<div id="renderer"
+											style="width:{{width}}px; height: {{height}}px; transform: scale({{zoom}}, {{zoom}});">
+										
+										{{> sgRenderer}}
+									</div>
+								</div>
+							</div>
+							--}}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</template>

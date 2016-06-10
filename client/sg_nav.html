@@ -1,0 +1,28 @@
+<template name="sgNav">
+	<h1>Components</h1>
+	<ul id="sgNav">
+		{{#each components}}
+			<li>
+				<a role="button" data-toggle="collapse"
+				   aria-expanded="false" aria-controls="#{{name}}-styles"
+				   href="#{{name}}-styles"
+				   class="collapsed {{active}}">
+				   <span>{{name}}</span>
+				</a>
+				<ul id="{{name}}-styles" class="collapse">
+					{{#each styles}}
+						<li>
+							{{> sgCompStyle component=../name style=.}}
+						</li>
+					{{/each}}
+				</ul>
+			</li>
+		{{/each}}
+	</ul>
+</template>
+
+<template name="sgCompStyle">
+	<a href="#" class="link {{active}}">
+		{{style.descr}}
+	</a>
+</template>

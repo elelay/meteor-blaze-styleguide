@@ -1,0 +1,28 @@
+.form-screen {
+	padding-left: 1em;
+	padding-top: 5px;
+}
+.form-screen:before {
+	font-style: italic;
+	font-size: 0.8em;
+	color: gray;
+	padding-right: 7px;
+}
+
+
+@media screen and (max-width: 767px) {
+	.form-screen:before {
+		content: "(< 767px)";
+	}
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+	.form-screen:before {
+		content: "(< 1024px)";
+	}
+}
+@media screen and (min-width: 1024px) {
+	.form-screen:before {
+		content: "(> 1023px)";
+	}
+}
