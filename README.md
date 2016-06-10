@@ -35,3 +35,7 @@ Checkout blaze-styleguide-example (to be released).
 			};
 		});
 ```
+
+## LICENSE
+
+blaze-styleguide is licensed under the MIT License.
