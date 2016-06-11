@@ -14,15 +14,10 @@ but my unwillingness to rewrite my whole apps using react.
 
 1. put your UI components in a separate package
 2. create a new package *yourapp*-catalogue depending on blaze-styleguide and your
-   UI packages. In this package, describe your components.
+   UI packages. In this package, describe your components and call `SG.configure({basePath: "/styleguide/"})`.
    Make it `debugOnly` so it's not included in production.
 3. add *yourapp*-catalogue to your app,
 4. add this to your app client code:
-   ```javascript
-	SG.configure({
-		basePath: "/styleguide"
-	});
-   ```
 5. navigate to http://localhost:3000/styleguide/catalogue
 
 ### Big app
