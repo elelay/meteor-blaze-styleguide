@@ -1,7 +1,7 @@
 Template.sgLayout.onRendered(function(){
 		this.autorun(function(){
-			var comp = Session.get("component");
-			var style = Session.get("style");
+			var comp = SG.getComponent();
+			var style = SG.getStyle();
 
 			if(comp && style){
 				var message = {
@@ -19,16 +19,18 @@ Template.sgLayout.onRendered(function(){
 });
 
 Template.sgLayout.helpers({
-		toRender: function(){
-			return Session.get("component") && Session.get("style");
+		componentName: SG.getComponent,
+		componentStyle: SG.getStyle,
+		disabledNoneSelected: function(){
+			return (SG.getComponent() && SG.getStyle()) ? "" : "disabled";
 		},
 		rendererPath: function(){
-			return FlowRouter.path("styleguide-renderer");
+			return FlowRouter.url("styleguide-renderer");
 		},
 		rendererPathWithOptions: function(){
-			return FlowRouter.path("styleguide-renderer", {
-					comp: Session.get("component"),
-					style: Session.get("style")
+			return FlowRouter.url("styleguide-renderer", {
+					comp: SG.getComponent(),
+					style: SG.getStyle()
 			});
 		},
 		width: function(){

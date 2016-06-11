@@ -6,20 +6,40 @@ This is a simple emulation of
 for blaze-based projects.
 
 It grew out of my appreciation for how useful it would be,
-but my unwillingness to rewrite my whole apps to react.
+but my unwillingness to rewrite my whole apps using react.
 
 ## Recommended usage
 
-1. put your UI components in packages
+### Small app (bearable time to reload)
+
+1. put your UI components in a separate package
 2. create a new package *yourapp*-catalogue depending on blaze-styleguide and your
    UI packages. In this package, describe your components.
-3. create a new app depending on *yourapp*-catalogue and call SG.configure
-   in its client code. Run it. You're done.
+   Make it `debugOnly` so it's not included in production.
+3. add *yourapp*-catalogue to your app,
+4. add this to your app client code:
+
+```javascript
+	SG.configure({
+		basePath: "/styleguide"
+	});
+```
+5. navigate to http://localhost:3000/styleguide/catalogue
+
+### Big app
+
+1. you've already got your UI components in packages, right?
+2. create a new package *yourapp*-catalogue depending on blaze-styleguide and your
+   UI packages. In this package, describe your components.
+3. create a new *yourapp*-showcatalogue application depending on *yourapp*-catalogue and call `SG.configure()`
+   in its client code.
+4. Run *yourapp*-showcatalogue instead of your app while you're focusing on UI design.
+5. navigate to http://localhost:3000/catalogue
 
 ## Examples
 
 Checkout blaze-styleguide-example (to be released).
-	
+
 ## Registering a component
 
 
@@ -35,6 +55,15 @@ Checkout blaze-styleguide-example (to be released).
 			};
 		});
 ```
+
+## Contributing
+
+This project can be improved in any of its aspects.
+
+I'd be very pleased to see it grow, but be even more pleased to see *Chromatic* support Blaze
+and kill this project.
+
+With that in mind, contributions are welcome :-)
 
 ## LICENSE
 

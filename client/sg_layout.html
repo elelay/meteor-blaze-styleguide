@@ -12,13 +12,19 @@
 								{{> sgScreenS}}
 							</div>
 							<div class="row">
-								<a id="external" aria-label="external link"
-									href="http://localhost:3100{{rendererPathWithOptions}}">
-									<span class="glyphicon glyphicon-link" aria-hidden="true"></span>
-								</a>
+								<p>
+									<a id="external" aria-label="external link"
+										href="{{rendererPathWithOptions}}"
+										class="btn btn-link {{disabledNoneSelected}}">
+										<span class="glyphicon glyphicon-link" aria-hidden="true"></span>
+									</a>
+									{{#if componentName}}
+										<strong>{{componentName}}</strong> / <strong>{{componentStyle}}</strong>
+									{{/if}}
+								</p>
 								<div style="width: 100%; height:100%; position:relative; overflow: hidden">
 									<iframe id="renderer"
-											src="http://localhost:3100{{rendererPath}}"
+											src="{{rendererPath}}"
 											style="width:{{width}}px; height: {{height}}px; transform: scale({{zoom}}, {{zoom}});">
 									</iframe>
 								</div>
