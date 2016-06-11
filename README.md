@@ -38,7 +38,7 @@ but my unwillingness to rewrite my whole apps using react.
 
 ## Examples
 
-Checkout blaze-styleguide-example (to be released).
+Checkout [blaze-styleguide-example](https://github.com/elelay/meteor-blaze-styleguide-example).
 
 ## Registering a component
 
