@@ -5,7 +5,7 @@ Package.describe({
 });
 
 function configurePackage(api) {
-    api.versionsFrom("1.3");
+    api.versionsFrom("1.5");
 
     var impliedPackages = ["standard-minifier-css", "standard-minifier-js",
         "templating", "underscore", "session",
